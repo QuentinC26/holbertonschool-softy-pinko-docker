@@ -1,3 +1,3 @@
-FROM ubuntu:24.04
-RUN apt update && apt install -y
-CMD ["python", "message.py"]
+FROM ubuntu:latest
+RUN apt-get update -y && apt-get upgrade -y
+CMD ["echo", "Hello, World!"]
