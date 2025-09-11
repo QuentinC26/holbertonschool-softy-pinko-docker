@@ -7,3 +7,12 @@ services:
     build:
       context: ./front-end
       dockerfile: Dockerfile
+  proxy:
+    build: 
+      context: ./proxy
+      dockerfile: Dockerfile
+    ports: 
+      - "80:80"
+    depends_on:
+      - front-end
+      - back-end
