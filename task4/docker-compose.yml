@@ -1,0 +1,15 @@
+services :
+  web: 
+    image: softy-pinko-front-end:task3
+    ports: 
+    - 80:80
+    volumes: 
+    - ./front-end/softy-pinko-front-end/index.html
+  db:
+    image: mysql:latest
+    environment: 
+    - MYSQL_ROOT_PASSWORD=secret
+    volumes: 
+    - db_data:/var/lib/mysql
+volumes:
+  db_data:
